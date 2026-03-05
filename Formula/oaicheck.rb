@@ -1,6 +1,3 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://docs.brew.sh/rubydoc/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Oaicheck < Formula
   desc "Simple CLI for testing OpenAI API configurations"
   homepage "https://github.com/kevin51jiang/oaicheck"
