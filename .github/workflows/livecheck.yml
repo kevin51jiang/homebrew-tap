@@ -8,6 +8,7 @@ on:
 jobs:
   livecheck-bump:
     runs-on: ubuntu-24.04
+    environment: gha
     permissions:
       actions: write
       contents: write
@@ -20,7 +21,7 @@ jobs:
       - name: Bump outdated formulae
         uses: dawidd6/action-homebrew-bump-formula@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.HOMEBREW_TAP_GITHUB_API_TOKEN }}
           tap: kevin51jiang/tap
           formula: oaicheck
           livecheck: true
