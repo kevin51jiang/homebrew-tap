@@ -1,0 +1,24 @@
+name: brew livecheck bump
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  livecheck-bump:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump outdated formulae
+        uses: dawidd6/action-homebrew-bump-formula@v7
+        with:
+          token: ${{ secrets.HOMEBREW_TAP_GITHUB_API_TOKEN }}
+          tap: ${{ github.repository }}
+          livecheck: true
