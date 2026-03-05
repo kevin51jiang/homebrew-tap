@@ -1,8 +1,8 @@
 class Oaicheck < Formula
   desc "Simple CLI for testing OpenAI API configurations"
   homepage "https://github.com/kevin51jiang/oaicheck"
-  url "https://github.com/kevin51jiang/oaicheck/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "7a5359d4e445d291493825d2cd10596bb6a46da996632eb0cb6474dcf10d2735"
+  url "https://github.com/kevin51jiang/oaicheck/archive/refs/tags/v0.4.0.tar.gz"
+  sha256 "6e2dad083a9c7553f0d3919ac06657076506b7aeb7e7acd4cd5094c214f9e665"
   license "AGPL-3.0"
 
   depends_on "go" => :build
