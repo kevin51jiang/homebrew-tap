@@ -20,5 +20,6 @@ jobs:
         uses: dawidd6/action-homebrew-bump-formula@v7
         with:
           token: ${{ secrets.HOMEBREW_TAP_GITHUB_API_TOKEN }}
-          tap: ${{ github.repository }}
+          tap: kevin51jiang/tap
+          formula: oaicheck
           livecheck: true
